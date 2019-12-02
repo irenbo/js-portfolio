@@ -1,4 +1,4 @@
-//создаю область для комментария
+//comment area
 let div = document.createElement("div");
 let comTitle = document.createElement("h3");
 let comTxtarea = document.createElement("textarea");
@@ -6,7 +6,7 @@ let comP = document.createElement("p");
 let comBtn = document.createElement("button");
 let p = document.createElement("p");
 
-//задаю атрибуты
+//attributes
 comTxtarea.setAttribute("name", "send_comment")
 comTxtarea.setAttribute("cols", "55");
 comTxtarea.setAttribute("cols", "55");
@@ -17,7 +17,7 @@ comBtn.setAttribute("name", "submit_btn");
 comBtn.setAttribute("value", "some-value");
 comBtn.setAttribute("type", "submit");
 
-//добавляю на страницу область комментария
+//add on a page
 comTitle.appendChild(document.createTextNode("Оставить комментарий"));
 comBtn.appendChild(document.createTextNode("Комментировать"));
 comP.appendChild(comBtn);
@@ -31,7 +31,7 @@ let comDiv = document.getElementById('comments');
 comDiv.appendChild(div);
 comDiv.appendChild(p);
 
-//повесить обработчик события на кнопку
+//event handler on a bottom
 let sendBtn = document.getElementById("send_comment");
 sendBtn.addEventListener('click', showComment);
 console.log(comTxtarea);
@@ -64,7 +64,7 @@ function showComment() {
 	//comDiv.appendChild(comContainer);
 	comDiv.insertBefore(comContainer, p.nextSibling);
 	
-	 //очистить поле textarea
+	 //clear a field textarea
 	 if (comTxtarea.value) {
 	 	comTxtarea.value = "";
 	 	comTxtarea.getAttribute('placeholder');
