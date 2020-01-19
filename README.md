@@ -1,2 +1,2 @@
-# js-portfolio
+# js-praxis
 Native javaScript
